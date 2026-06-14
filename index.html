@@ -130,7 +130,7 @@
             // 2. 核心障眼法邏輯：直接將輸入的密碼當作檔案路徑
             // 如果輸入 "study777"，網頁就會嘗試導向到原本的 "study777.html"
             // 強制採用 target="_self" 的效果，在原視窗直接改變網址
-            window.location.href = userInput + ".html";
+            window.location.href = "./Web-Project/" + userInput + ".html";
         }
 
         // 輔助功能：支援按下鍵盤的「Enter鍵」直接送出，不需要用滑鼠點按鈕
