@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="title">系統提示</h1>
+    <p id="message">正在載入中...</p>
+
+    <script>
+        const messages = {
+            "maint": "伺服器正在維護中，暫時無法開啟檔案。",
+            "404": "檔案找不到：這裏的檔案可能已經過期或已經被移除。",
+            "expired": "連結已失效：檔案已經過期。"
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        
+        // 若找不到對應參數，則顯示預設錯誤
+        document.getElementById('message').innerText = messages[type] || "發生未知錯誤，請聯繫管理員。";
+    </script>
+</body>
+</html>
