@@ -7,12 +7,9 @@
     <link href="./Webpage_static_files/css2.css" rel="stylesheet">
     <style>
         :root {--bg: #09090b; --surface: rgba(24, 24, 27, 0.85); --surface-soft: rgba(39, 39, 42, 0.8); --text: #f4f4f5; --border: rgba(255, 255, 255, 0.08); --primary: #06b6d4; --primary-hover: #22d3ee; --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); --gradient-bg: radial-gradient(circle at top left, rgba(6, 182, 212, 0.08), transparent 40%), linear-gradient(180deg, #09090b 0%, #000000 100%);}
-
         * { box-sizing: border-box; }
         body {font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gradient-bg); background-attachment: fixed; color: var(--text); margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden;}
-
         .login-box {background: var(--surface); border: 1px solid var(--border); padding: 40px; border-radius: 28px; max-width: 400px; width: 90%; text-align: center; box-shadow: var(--shadow); backdrop-filter: blur(14px);}
-
         .login-box h2 {
             font-size: 1.8rem;
             margin-bottom: 10px;
@@ -68,18 +65,14 @@
         .submit-btn:hover {
             background: var(--primary-hover);
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
-        }
+            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);}
     </style>
 </head>
 <body>
-
     <div class="login-box">
         <h2>身份驗證</h2>
         <p>請輸入授權密鑰以開啟教學檔案</p>
-        
         <input type="password" id="pwInput" class="password-input" placeholder="請輸入訪問密碼..." onkeydown="checkEnter(event)">
-        
         <button class="submit-btn" onclick="verifyAndGo()">確認送出</button>
     </div>
 
@@ -87,25 +80,12 @@
         function verifyAndGo() {
             // 1. 獲取使用者輸入的文字（並去除前後空格）
             const userInput = document.getElementById('pwInput').value.trim();
-            
-            if (!userInput) {
-                alert('請先輸入密碼！');
-                return;
-            }
-
+            if (!userInput) {alert('請先輸入密碼！');return;}
             // 2. 核心障眼法邏輯：直接將輸入的密碼當作檔案路徑
             // 如果輸入 "study777"，網頁就會嘗試導向到原本的 "study777.html"
             // 強制採用 target="_self" 的效果，在原視窗直接改變網址
-            window.location.href = "./Web-Project/" + userInput + ".html";
-        }
-
-        // 輔助功能：支援按下鍵盤的「Enter鍵」直接送出，不需要用滑鼠點按鈕
-        function checkEnter(event) {
-            if (event.key === 'Enter') {
-                verifyAndGo();
-            }
-        }
+            window.location.href = "./Web-Project/" + userInput + ".html";}
+        function checkEnter(event) {if (event.key === 'Enter') {verifyAndGo();}}
     </script>
-
 </body>
 </html>
