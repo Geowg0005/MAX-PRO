@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Adverbs of Sequence | Teaching Archives</title>
+    <link href="../../Webpage_static_files/css2.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Stealth & Ice Theme */
+            --bg: #09090b;
+            --bg-alt: #18181b;
+            --surface: rgba(24, 24, 27, 0.85);
+            --surface-soft: rgba(39, 39, 42, 0.8);
+            --surface-hover: rgba(63, 63, 70, 0.85);
+            --text: #f4f4f5;
+            --muted: #a1a1aa;
+            --border: rgba(255, 255, 255, 0.08);
+            --primary: #06b6d4; /* Electric Cyan */
+            --primary-2: #0891b2; /* Deep Cyan */
+            --accent: #22d3ee; /* Bright Ice Blue */
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --gradient-bg: radial-gradient(circle at top left, rgba(6, 182, 212, 0.08), transparent 30%),
+                radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.05), transparent 25%),
+                linear-gradient(180deg, #09090b 0%, #18181b 50%, #000000 100%);
+            --hero-glow: radial-gradient(circle at center, rgba(6, 182, 212, 0.12), transparent 60%);
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--gradient-bg);
+            background-attachment: fixed;
+            color: var(--text);
+            padding: 32px;
+            line-height: 1.8;
+            font-size: 18px;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        body.home-page {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body.home-page .container {
+            max-width: 100%;
+        }
+
+        body.home-page .content {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin: 0;
+            backdrop-filter: none;
+        }
+
+        .container {
+            max-width: 1300px; /* Pillar: Immersive Full-Width */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .nav-bar {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+            transition: all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+            border-color: rgba(110, 193, 228, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.26);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 16px 0;
+        }
+
+        h1 {
+            color: var(--text);
+            margin-bottom: 12px;
+            font-size: 3.4em;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+        }
+
+        h2 {
+            color: var(--muted);
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 1.6em;
+            font-weight: 500;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.95em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h4 {
+            color: var(--text);
+            font-size: 1.45em;
+            margin: 20px 0 10px 0;
+            font-weight: 700;
+        }
+
+        .content {
+            background: var(--surface);
+            padding: 60px; /* Increased padding for "More Content" feel */
+            border-radius: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: var(--shadow);
+            position: relative;
+            backdrop-filter: blur(14px);
+            margin-bottom: 60px;
+        }
+
+        ul {
+            line-height: 1.95;
+            margin: 20px 0;
+            padding-left: 32px;
+        }
+
+        li {
+            margin-bottom: 16px;
+            font-size: 1.12rem;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        p {
+            margin: 18px 0;
+            font-size: 1.12rem;
+            line-height: 1.85;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        mark {
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            margin: 0 2px;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        mark:hover {
+            filter: brightness(1.15);
+        }
+
+        mark.cyan {
+            background-color: rgba(110, 193, 228, 0.28);
+            color: #fff;
+            border: 1px solid rgba(110, 193, 228, 0.45);
+        }
+
+        mark.green {
+            background-color: rgba(34, 197, 129, 0.28);
+            color: #fff;
+            border: 1px solid rgba(34, 197, 129, 0.45);
+        }
+
+        mark.red {
+            background-color: rgba(244, 63, 94, 0.28);
+            color: #fff;
+            border: 1px solid rgba(244, 63, 94, 0.45);
+        }
+
+        mark.yellow {
+            background-color: rgba(234, 179, 8, 0.28);
+            color: #fff;
+            border: 1px solid rgba(234, 179, 8, 0.45);
+        }
+
+        mark:not([class]) {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-color: rgba(136, 214, 255, 0.3);
+            font-weight: 600;
+            transition: all 0.25s ease;
+        }
+
+        .content a:hover {
+            color: #fff;
+            text-decoration-color: var(--accent);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 28px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.04);
+        }
+
+        th,
+        td {
+            padding: 18px 22px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #d7e4f4;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            font-weight: 700;
+            color: #f0f7ff;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        td[colspan="2"] {
+            background: rgba(110, 193, 228, 0.15);
+            color: #e4fbff;
+            font-size: 1.18rem;
+            font-weight: 700;
+            text-align: center;
+            border-top: 1px solid rgba(110, 193, 228, 0.2);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            color: #fff !important;
+            padding: 16px 34px;
+            border-radius: 16px;
+            text-decoration: none !important;
+            border: none;
+            font-size: 1.18rem;
+            font-weight: 700;
+            box-shadow: 0 18px 40px rgba(26, 58, 92, 0.2);
+            display: inline-block;
+            margin: 18px 0;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 24px 50px rgba(26, 58, 92, 0.38);
+        }
+
+        .tips-box,
+        .example-box,
+        .warning-box,
+        .rules-box {
+            padding: 26px;
+            margin: 32px 0;
+            border-radius: 22px;
+            border-left: 4px solid;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.04);
+        }
+
+        .tips-box {
+            background: rgba(26, 54, 91, 0.7);
+            border-color: #4c7fa0;
+        }
+
+        .example-box {
+            background: rgba(19, 35, 57, 0.72);
+            border-color: #6eb6f2;
+        }
+
+        .warning-box {
+            background: rgba(55, 26, 48, 0.72);
+            border-color: #f093c6;
+        }
+
+        .rules-box {
+            background: rgba(10, 20, 37, 0.8);
+            border-color: var(--accent);
+        }
+
+        .rules-box {
+            background: rgba(10, 20, 37, 0.8);
+            border-color: var(--accent);
+        }
+
+        .tense-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Pillar: Auto-Balance */
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .tense-card {
+            flex: 1 1 240px; /* Pillar: Grow to fill, base at 240px */
+            max-width: 350px; /* Prevent over-stretching */
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 22px 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .tense-card:hover {
+            border-color: rgba(110, 193, 228, 0.45);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .tense-card.active {
+            background: linear-gradient(135deg, rgba(110, 193, 228, 0.3), rgba(63, 141, 188, 0.25));
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 16px 35px rgba(25, 55, 88, 0.25);
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+
+        .content-section.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.04);
+        }
+
+        .question {
+            margin-bottom: 32px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .question-text {
+            font-weight: 700;
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+            color: #eef6ff;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option {
+            padding: 18px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1.15rem;
+            color: #d3e1f3;
+        }
+
+        .option:hover {
+            border-color: rgba(110, 193, 228, 0.45);
+            background: rgba(255, 255, 255, 0.08);
+            color: #f2fbff;
+            transform: translateX(4px);
+            box-shadow: 0 8px 18px rgba(6, 15, 32, 0.18);
+        }
+
+        .option input[type="radio"] {
+            margin-right: 15px;
+            cursor: pointer;
+            transform: scale(1.25);
+            accent-color: var(--primary);
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 14px;
+            font-weight: 600;
+            display: none;
+            font-size: 1.1rem;
+        }
+
+        .feedback.correct {
+            background: rgba(21, 76, 51, 0.22);
+            color: #b8f2d5;
+            border: 1px solid rgba(138, 227, 193, 0.25);
+            display: block;
+        }
+
+        .feedback.incorrect {
+            background: rgba(152, 45, 53, 0.22);
+            color: #ffd9de;
+            border: 1px solid rgba(255, 155, 190, 0.25);
+            display: block;
+        }
+
+        .check-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #eef6ff;
+            padding: 15px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.25s ease;
+        }
+
+        .check-btn:hover {
+            background: linear-gradient(135deg, rgba(110, 193, 228, 0.22), rgba(63, 141, 188, 0.22));
+            border-color: rgba(110, 193, 228, 0.4);
+            color: white;
+            box-shadow: 0 12px 28px rgba(16, 38, 62, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .check-btn:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.08);
+            color: var(--muted);
+            box-shadow: none;
+            transform: none;
+        }
+
+        .progress-container {
+            text-align: center;
+            padding: 26px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 18px;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 20px;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .progress-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #eef6ff;
+        }
+
+        .reset-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: #d7e4f4;
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .reset-btn:hover {
+            background: rgba(110, 193, 228, 0.16);
+            border-color: rgba(110, 193, 228, 0.35);
+            color: #f4fdff;
+        }
+
+        .explanation {
+            margin-top: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border-left: 4px solid rgba(110, 193, 228, 0.7);
+            border-radius: 0 14px 14px 0;
+            font-size: 1.1rem;
+            color: #d7e4f4;
+            display: none;
+        }
+
+        .explanation.show {
+            display: block;
+        }
+
+        /* Grammar Bubble Styling */
+        .grammar-bubble {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 4px 14px;
+            margin: 4px 2px;
+            border: 1.5px solid transparent;
+            font-weight: 500;
+            color: #eef6ff;
+            vertical-align: middle;
+            line-height: 1.2;
+        }
+
+        .bubble-cyan {
+            border-color: #00acc1;
+            background: rgba(0, 172, 193, 0.15);
+        }
+
+        .bubble-yellow {
+            border-color: #fbc02d;
+            background: rgba(251, 192, 45, 0.15);
+        }
+
+        .v-bubble {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 2px 12px;
+            margin: 0 4px;
+            font-weight: 700;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .v-green {
+            background: #26a69a;
+            color: #fff;
+        }
+
+        .v-red {
+            background: #ef5350;
+            color: #fff;
+        }
+
+        .v-orange {
+            background: #ff7043;
+            color: #fff;
+        }
+
+        /* Legacy mark compatibility override */
+        mark {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        /* Interactive Practice Table Styles */
+        .answer {
+            display: none;
+        }
+
+        .answer.show {
+            display: inline;
+        }
+
+        .placeholder.hide {
+            display: none;
+        }
+
+        .clickable-situation {
+            padding: 0;
+        }
+
+        .clickable-situation span {
+            display: inline-block;
+            padding: 8px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .clickable-situation span:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .hint-toggle {
+            cursor: pointer;
+            padding: 0 4px;
+            transition: all 0.2s ease;
+            border-bottom: 1px dashed rgba(255,255,255,0.3);
+        }
+
+        .hint-toggle:hover {
+            color: var(--primary);
+            background: rgba(110, 193, 228, 0.1);
+            border-radius: 4px;
+            border-bottom-color: var(--primary);
+        }
+
+        .clickable-sentence {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .clickable-sentence:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .part-1,
+        .part-2 {
+            display: inline;
+        }
+
+        .audio-icon {
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            opacity: 0.6;
+            transition: opacity 0.2s, transform 0.1s;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .audio-icon:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .audio-icon:active {
+            transform: scale(0.9);
+        }
+
+        .verb-lab-input {
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #444;
+            background: #1a1a1a;
+            color: white;
+            width: 100%;
+            max-width: 250px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .verb-lab-input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        /* Full-Width immersive overrides */
+        .visual-anchor {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Perfectly Centered Gutter Floating Buttons */
+        .floating-side-btn {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            color: var(--text);
+            padding: 10px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            text-align: center;
+            min-width: 65px;
+            text-decoration: none;
+        }
+
+        .floating-side-btn:hover {
+            border-color: rgba(110, 193, 228, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-50%) scale(1.05);
+            color: #fff;
+        }
+
+        .floating-side-btn.active {
+            background: var(--primary);
+            color: #07131f;
+            border-color: transparent;
+        }
+
+        .floating-left {
+            left: max(15px, calc((100vw - 1300px) / 4 - 32px));
+        }
+
+        .floating-right {
+            right: max(15px, calc((100vw - 1300px) / 4 - 32px));
+        }
+
+        @media (max-width: 1450px) {
+            .floating-side-btn {
+                transform: translateY(-50%) scale(0.9);
+            }
+            .floating-side-btn:hover {
+                transform: translateY(-50%) scale(0.95);
+            }
+        }
+    </style>
+</head>
+</head>
+
+<body class="">
+
+
+
+    <div class="container">
+        <header>
+            
+            <h1>📝 Quiz: Adverbs of Sequence</h1>
+            
+            
+        </header>
+
+        <div class="content">
+            
+            <div class="quiz-container">
+        <div class="progress-container" id="progressContainer">
+            <span class="progress-text" id="progressText">Answer the questions below</span>
+            <button class="reset-btn" onclick="resetQuiz()">Reset All</button>
+        </div>
+
+        <form id="quizForm">
+            <!-- Questions will be dynamically generated here -->
+        </form>
+    </div>
+</div>
+
+<script>
+    let checkedQuestions = new Set();
+    let currentQuestions = [];
+    let answers = {};
+    
+    // Question bank with all possible questions
+    const questionBank = [
+        {
+            question: "_____, I woke up at 7 AM. Then I had breakfast.",
+            options: ["First", "Finally", "After that"],
+            correct: 0,
+            explanation: "Use 'First' to introduce the beginning action in a sequence."
+        },
+        {
+            question: "I finished my homework. _____, I watched TV.",
+            options: ["After that", "First", "Before"],
+            correct: 0,
+            explanation: "Use 'After that' or 'Then' to show what happened next."
+        },
+        {
+            question: "_____, we arrived at the airport safely.",
+            options: ["Finally", "First", "Next"],
+            correct: 0,
+            explanation: "Use 'Finally' to indicate the last action in a sequence."
+        },
+        {
+            question: "First, mix the ingredients. _____, bake for 30 minutes.",
+            options: ["Next", "Finally", "Before"],
+            correct: 0,
+            explanation: "Use 'Next' or 'Then' to show the following step."
+        },
+        {
+            question: "I got dressed. _____ I left the house.",
+            options: ["Then", "First", "Finally"],
+            correct: 0,
+            explanation: "Use 'Then' to connect consecutive actions."
+        },
+        {
+            question: "Which adverb introduces the FIRST step?",
+            options: ["First", "Then", "Finally"],
+            correct: 0,
+            explanation: "'First' or 'Firstly' introduces the beginning of a sequence."
+        },
+        {
+            question: "First, boil water. Next, add pasta. _____, drain the water.",
+            options: ["Finally", "First", "Then"],
+            correct: 0,
+            explanation: "Use 'Finally' to conclude the sequence of steps."
+        },
+        {
+            question: "_____ going to bed, I brush my teeth.",
+            options: ["Before", "After", "Then"],
+            correct: 0,
+            explanation: "Use 'Before' to show what happens earlier in time."
+        },
+        {
+            question: "I studied hard. _____, I passed the exam.",
+            options: ["As a result", "First", "Next"],
+            correct: 0,
+            explanation: "Use 'As a result' to show consequence, though it's more of a result connector than sequence."
+        },
+        {
+            question: "Which is the CORRECT order?",
+            options: ["First, Next, Finally", "Finally, First, Next", "Next, Finally, First"],
+            correct: 0,
+            explanation: "The logical sequence order is: First, Next/Then, Finally."
+        },
+        {
+            question: "We arrived at the station. _____ we bought tickets.",
+            options: ["Then", "Finally", "Before"],
+            correct: 0,
+            explanation: "Use 'Then' or 'After that' for the next action in sequence."
+        },
+        {
+            question: "_____ eating dinner, I did the dishes.",
+            options: ["After", "Before", "First"],
+            correct: 0,
+            explanation: "Use 'After' to show an action that follows another."
+        },
+        {
+            question: "Turn on the computer. _____, open the program.",
+            options: ["Next", "Finally", "Before"],
+            correct: 0,
+            explanation: "Use 'Next' or 'Then' for the subsequent step."
+        },
+        {
+            question: "Which word shows the LAST action?",
+            options: ["Finally", "First", "Next"],
+            correct: 0,
+            explanation: "'Finally' or 'Lastly' indicates the concluding action."
+        },
+        {
+            question: "_____, preheat the oven. Then, prepare the ingredients.",
+            options: ["First", "Finally", "After"],
+            correct: 0,
+            explanation: "Use 'First' to begin a sequence of instructions."
+        },
+        {
+            question: "She read the instructions. _____, she assembled the furniture.",
+            options: ["After that", "Before", "Finally"],
+            correct: 0,
+            explanation: "Use 'After that' or 'Then' to show the following action."
+        },
+        {
+            question: "Add sugar. _____, stir well. Finally, serve.",
+            options: ["Then", "First", "Before"],
+            correct: 0,
+            explanation: "Use 'Then' or 'Next' for middle steps in a sequence."
+        },
+        {
+            question: "_____ leaving, I locked the door.",
+            options: ["Before", "After", "Then"],
+            correct: 0,
+            explanation: "Use 'Before' to show what happens prior to another action."
+        },
+        {
+            question: "I woke up, got dressed, had breakfast, and _____ left for work.",
+            options: ["then", "first", "before"],
+            correct: 0,
+            explanation: "Use 'then' or 'finally' for the last action in a list."
+        },
+        {
+            question: "Which is INCORRECT sequencing?",
+            options: ["Finally, First, Next", "First, Then, Finally", "First, Next, Finally"],
+            correct: 0,
+            explanation: "'Finally' should come at the end, not the beginning of a sequence."
+        }
+    ];
+
+    // Shuffle array function
+    function shuffle(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+    }
+
+    // Generate quiz on page load
+    function generateQuiz() {
+        // Shuffle and select 12 random questions
+        const shuffled = shuffle(questionBank);
+        currentQuestions = shuffled.slice(0, 12);
+        
+        // Generate HTML for questions
+        const quizForm = document.getElementById('quizForm');
+        quizForm.innerHTML = '';
+        
+        currentQuestions.forEach((q, index) => {
+            const questionNum = index + 1;
+            const questionId = `q${questionNum}`;
+            
+            // Shuffle options
+            const shuffledOptions = q.options.map((opt, idx) => ({ text: opt, isCorrect: idx === q.correct }));
+            const shuffledOptionsArray = shuffle(shuffledOptions);
+            
+            // Find correct answer index after shuffle
+            const correctIndex = shuffledOptionsArray.findIndex(opt => opt.isCorrect);
+            answers[questionId] = String.fromCharCode(97 + correctIndex); // 'a', 'b', 'c', etc.
+            
+            // Build question HTML
+            const questionHTML = `
+            <div class="question">
+                <div class="question-text">${questionNum}. ${q.question} <span class="audio-icon" onclick="speakSentence(this)">🔊</span></div>
+                <div class="options">
+                    ${shuffledOptionsArray.map((opt, idx) => `
+                    <label class="option">
+                        <input type="radio" name="${questionId}" value="${String.fromCharCode(97 + idx)}">
+                        ${opt.text}
+                    </label>`).join('')}
+                </div>
+                <div class="feedback" id="feedback${questionNum}"></div>
+                <div class="explanation" id="explanation${questionNum}">
+                    ${q.explanation}
+                </div>
+                <button type="button" class="check-btn" onclick="checkQuestion(${questionNum})">Check Answer</button>
+            </div>`;
+            
+            quizForm.innerHTML += questionHTML;
+        });
+    }
+
+    // Initialize quiz on page load
+    window.addEventListener('DOMContentLoaded', generateQuiz);
+
+    function checkQuestion(questionNum) {
+        const question = `q${questionNum}`;
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        
+        if (!selected) {
+            alert('Please select an answer first.');
+            return;
+        }
+
+        const isCorrect = (selected.value === answers[question]);
+        renderSemanticFeedback(questionNum, isCorrect);
+        
+        const button = event.target;
+        button.disabled = true;
+        button.textContent = 'Checked ✓';
+        
+        checkedQuestions.add(questionNum);
+        updateProgress();
+    }
+    
+    function updateProgress() {
+        const totalQuestions = Object.keys(answers).length;
+        const checked = checkedQuestions.size;
+        const progressText = document.getElementById('progressText');
+        
+        if (checked === 0) {
+            progressText.textContent = 'Answer the questions below';
+        } else if (checked === totalQuestions) {
+            const correctCount = Array.from(checkedQuestions).filter(num => {
+                const question = `q${num}`;
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                return selected && selected.value === answers[question];
+            }).length;
+            
+            progressText.textContent = `Quiz Complete! Score: ${correctCount}/${totalQuestions}`;
+        } else {
+            progressText.textContent = `Progress: ${checked}/${totalQuestions} questions checked`;
+        }
+    }
+
+    function resetQuiz() {
+        // Regenerate the quiz with new random questions
+        generateQuiz();
+        
+        // Reset progress
+        checkedQuestions.clear();
+        updateProgress();
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+        </div>
+    </div>
+
+    
+    <a href="../../index.html" class="floating-side-btn floating-left">
+        <span style="font-size: 0.85rem; font-weight: 800; line-height: 1; letter-spacing: 0.05em; margin-bottom: 3px; color: var(--accent);">BACK</span>
+        <span style="font-size: 0.75rem; line-height: 1; opacity: 0.85;">Home</span>
+    </a>
+    
+
+    
+    <button type="button" id="speedToggleBtn" class="floating-side-btn floating-right" onclick="toggleAudioSpeed()">
+        <span style="font-size: 0.85rem; font-weight: 800; line-height: 1; letter-spacing: 0.05em; margin-bottom: 3px; color: var(--accent);">AUDIO</span>
+        <span style="font-size: 0.75rem; line-height: 1; opacity: 0.85;">Slower</span>
+    </button>
+    
+
+    <script>window.pageCategory = "Quizzes";</script>
+    <script src="../../Webpage_static_files/main.js"></script>
+</body>
+</html>

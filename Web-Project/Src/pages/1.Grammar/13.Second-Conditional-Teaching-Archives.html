@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Conditional | Teaching Archives</title>
+    <link href="../../Webpage_static_files/css2.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Stealth & Ice Theme */
+            --bg: #09090b;
+            --bg-alt: #18181b;
+            --surface: rgba(24, 24, 27, 0.85);
+            --surface-soft: rgba(39, 39, 42, 0.8);
+            --surface-hover: rgba(63, 63, 70, 0.85);
+            --text: #f4f4f5;
+            --muted: #a1a1aa;
+            --border: rgba(255, 255, 255, 0.08);
+            --primary: #06b6d4; /* Electric Cyan */
+            --primary-2: #0891b2; /* Deep Cyan */
+            --accent: #22d3ee; /* Bright Ice Blue */
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --gradient-bg: radial-gradient(circle at top left, rgba(6, 182, 212, 0.08), transparent 30%),
+                radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.05), transparent 25%),
+                linear-gradient(180deg, #09090b 0%, #18181b 50%, #000000 100%);
+            --hero-glow: radial-gradient(circle at center, rgba(6, 182, 212, 0.12), transparent 60%);
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--gradient-bg);
+            background-attachment: fixed;
+            color: var(--text);
+            padding: 32px;
+            line-height: 1.8;
+            font-size: 18px;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        body.home-page {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body.home-page .container {
+            max-width: 100%;
+        }
+
+        body.home-page .content {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin: 0;
+            backdrop-filter: none;
+        }
+
+        .container {
+            max-width: 1300px; /* Pillar: Immersive Full-Width */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .nav-bar {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+            transition: all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+            border-color: rgba(110, 193, 228, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.26);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 16px 0;
+        }
+
+        h1 {
+            color: var(--text);
+            margin-bottom: 12px;
+            font-size: 3.4em;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+        }
+
+        h2 {
+            color: var(--muted);
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 1.6em;
+            font-weight: 500;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.95em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h4 {
+            color: var(--text);
+            font-size: 1.45em;
+            margin: 20px 0 10px 0;
+            font-weight: 700;
+        }
+
+        .content {
+            background: var(--surface);
+            padding: 60px; /* Increased padding for "More Content" feel */
+            border-radius: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: var(--shadow);
+            position: relative;
+            backdrop-filter: blur(14px);
+            margin-bottom: 60px;
+        }
+
+        ul {
+            line-height: 1.95;
+            margin: 20px 0;
+            padding-left: 32px;
+        }
+
+        li {
+            margin-bottom: 16px;
+            font-size: 1.12rem;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        p {
+            margin: 18px 0;
+            font-size: 1.12rem;
+            line-height: 1.85;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        mark {
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            margin: 0 2px;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        mark:hover {
+            filter: brightness(1.15);
+        }
+
+        mark.cyan {
+            background-color: rgba(110, 193, 228, 0.28);
+            color: #fff;
+            border: 1px solid rgba(110, 193, 228, 0.45);
+        }
+
+        mark.green {
+            background-color: rgba(34, 197, 129, 0.28);
+            color: #fff;
+            border: 1px solid rgba(34, 197, 129, 0.45);
+        }
+
+        mark.red {
+            background-color: rgba(244, 63, 94, 0.28);
+            color: #fff;
+            border: 1px solid rgba(244, 63, 94, 0.45);
+        }
+
+        mark.yellow {
+            background-color: rgba(234, 179, 8, 0.28);
+            color: #fff;
+            border: 1px solid rgba(234, 179, 8, 0.45);
+        }
+
+        mark:not([class]) {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-color: rgba(136, 214, 255, 0.3);
+            font-weight: 600;
+            transition: all 0.25s ease;
+        }
+
+        .content a:hover {
+            color: #fff;
+            text-decoration-color: var(--accent);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 28px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.04);
+        }
+
+        th,
+        td {
+            padding: 18px 22px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #d7e4f4;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            font-weight: 700;
+            color: #f0f7ff;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        td[colspan="2"] {
+            background: rgba(110, 193, 228, 0.15);
+            color: #e4fbff;
+            font-size: 1.18rem;
+            font-weight: 700;
+            text-align: center;
+            border-top: 1px solid rgba(110, 193, 228, 0.2);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            color: #fff !important;
+            padding: 16px 34px;
+            border-radius: 16px;
+            text-decoration: none !important;
+            border: none;
+            font-size: 1.18rem;
+            font-weight: 700;
+            box-shadow: 0 18px 40px rgba(26, 58, 92, 0.2);
+            display: inline-block;
+            margin: 18px 0;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 24px 50px rgba(26, 58, 92, 0.38);
+        }
+
+        .tips-box,
+        .example-box,
+        .warning-box,
+        .rules-box {
+            padding: 26px;
+            margin: 32px 0;
+            border-radius: 22px;
+            border-left: 4px solid;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.04);
+        }
+
+        .tips-box {
+            background: rgba(26, 54, 91, 0.7);
+            border-color: #4c7fa0;
+        }
+
+        .example-box {
+            background: rgba(19, 35, 57, 0.72);
+            border-color: #6eb6f2;
+        }
+
+        .warning-box {
+            background: rgba(55, 26, 48, 0.72);
+            border-color: #f093c6;
+        }
+
+        .rules-box {
+            background: rgba(10, 20, 37, 0.8);
+            border-color: var(--accent);
+        }
+
+        .rules-box {
+            background: rgba(10, 20, 37, 0.8);
+            border-color: var(--accent);
+        }
+
+        .tense-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Pillar: Auto-Balance */
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .tense-card {
+            flex: 1 1 240px; /* Pillar: Grow to fill, base at 240px */
+            max-width: 350px; /* Prevent over-stretching */
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 22px 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .tense-card:hover {
+            border-color: rgba(110, 193, 228, 0.45);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .tense-card.active {
+            background: linear-gradient(135deg, rgba(110, 193, 228, 0.3), rgba(63, 141, 188, 0.25));
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 16px 35px rgba(25, 55, 88, 0.25);
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+
+        .content-section.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.04);
+        }
+
+        .question {
+            margin-bottom: 32px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .question-text {
+            font-weight: 700;
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+            color: #eef6ff;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option {
+            padding: 18px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1.15rem;
+            color: #d3e1f3;
+        }
+
+        .option:hover {
+            border-color: rgba(110, 193, 228, 0.45);
+            background: rgba(255, 255, 255, 0.08);
+            color: #f2fbff;
+            transform: translateX(4px);
+            box-shadow: 0 8px 18px rgba(6, 15, 32, 0.18);
+        }
+
+        .option input[type="radio"] {
+            margin-right: 15px;
+            cursor: pointer;
+            transform: scale(1.25);
+            accent-color: var(--primary);
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 14px;
+            font-weight: 600;
+            display: none;
+            font-size: 1.1rem;
+        }
+
+        .feedback.correct {
+            background: rgba(21, 76, 51, 0.22);
+            color: #b8f2d5;
+            border: 1px solid rgba(138, 227, 193, 0.25);
+            display: block;
+        }
+
+        .feedback.incorrect {
+            background: rgba(152, 45, 53, 0.22);
+            color: #ffd9de;
+            border: 1px solid rgba(255, 155, 190, 0.25);
+            display: block;
+        }
+
+        .check-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #eef6ff;
+            padding: 15px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.25s ease;
+        }
+
+        .check-btn:hover {
+            background: linear-gradient(135deg, rgba(110, 193, 228, 0.22), rgba(63, 141, 188, 0.22));
+            border-color: rgba(110, 193, 228, 0.4);
+            color: white;
+            box-shadow: 0 12px 28px rgba(16, 38, 62, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .check-btn:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.08);
+            color: var(--muted);
+            box-shadow: none;
+            transform: none;
+        }
+
+        .progress-container {
+            text-align: center;
+            padding: 26px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 18px;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 20px;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .progress-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #eef6ff;
+        }
+
+        .reset-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: #d7e4f4;
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .reset-btn:hover {
+            background: rgba(110, 193, 228, 0.16);
+            border-color: rgba(110, 193, 228, 0.35);
+            color: #f4fdff;
+        }
+
+        .explanation {
+            margin-top: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border-left: 4px solid rgba(110, 193, 228, 0.7);
+            border-radius: 0 14px 14px 0;
+            font-size: 1.1rem;
+            color: #d7e4f4;
+            display: none;
+        }
+
+        .explanation.show {
+            display: block;
+        }
+
+        /* Grammar Bubble Styling */
+        .grammar-bubble {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 4px 14px;
+            margin: 4px 2px;
+            border: 1.5px solid transparent;
+            font-weight: 500;
+            color: #eef6ff;
+            vertical-align: middle;
+            line-height: 1.2;
+        }
+
+        .bubble-cyan {
+            border-color: #00acc1;
+            background: rgba(0, 172, 193, 0.15);
+        }
+
+        .bubble-yellow {
+            border-color: #fbc02d;
+            background: rgba(251, 192, 45, 0.15);
+        }
+
+        .v-bubble {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 2px 12px;
+            margin: 0 4px;
+            font-weight: 700;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .v-green {
+            background: #26a69a;
+            color: #fff;
+        }
+
+        .v-red {
+            background: #ef5350;
+            color: #fff;
+        }
+
+        .v-orange {
+            background: #ff7043;
+            color: #fff;
+        }
+
+        /* Legacy mark compatibility override */
+        mark {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        /* Interactive Practice Table Styles */
+        .answer {
+            display: none;
+        }
+
+        .answer.show {
+            display: inline;
+        }
+
+        .placeholder.hide {
+            display: none;
+        }
+
+        .clickable-situation {
+            padding: 0;
+        }
+
+        .clickable-situation span {
+            display: inline-block;
+            padding: 8px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .clickable-situation span:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .hint-toggle {
+            cursor: pointer;
+            padding: 0 4px;
+            transition: all 0.2s ease;
+            border-bottom: 1px dashed rgba(255,255,255,0.3);
+        }
+
+        .hint-toggle:hover {
+            color: var(--primary);
+            background: rgba(110, 193, 228, 0.1);
+            border-radius: 4px;
+            border-bottom-color: var(--primary);
+        }
+
+        .clickable-sentence {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .clickable-sentence:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .part-1,
+        .part-2 {
+            display: inline;
+        }
+
+        .audio-icon {
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            opacity: 0.6;
+            transition: opacity 0.2s, transform 0.1s;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .audio-icon:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .audio-icon:active {
+            transform: scale(0.9);
+        }
+
+        .verb-lab-input {
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #444;
+            background: #1a1a1a;
+            color: white;
+            width: 100%;
+            max-width: 250px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .verb-lab-input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        /* Full-Width immersive overrides */
+        .visual-anchor {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Perfectly Centered Gutter Floating Buttons */
+        .floating-side-btn {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            color: var(--text);
+            padding: 10px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            text-align: center;
+            min-width: 65px;
+            text-decoration: none;
+        }
+
+        .floating-side-btn:hover {
+            border-color: rgba(110, 193, 228, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-50%) scale(1.05);
+            color: #fff;
+        }
+
+        .floating-side-btn.active {
+            background: var(--primary);
+            color: #07131f;
+            border-color: transparent;
+        }
+
+        .floating-left {
+            left: max(15px, calc((100vw - 1300px) / 4 - 32px));
+        }
+
+        .floating-right {
+            right: max(15px, calc((100vw - 1300px) / 4 - 32px));
+        }
+
+        @media (max-width: 1450px) {
+            .floating-side-btn {
+                transform: translateY(-50%) scale(0.9);
+            }
+            .floating-side-btn:hover {
+                transform: translateY(-50%) scale(0.95);
+            }
+        }
+    </style>
+</head>
+</head>
+
+<body class="">
+
+
+
+    <div class="container">
+        <header>
+            
+            <h1>🧩 Second Conditional</h1>
+            
+            
+        </header>
+
+        <div class="content">
+            
+            <div class="visual-anchor" style="padding: 30px;">
+    <div class="anchor-title">🧠 Second Conditional Roadmap</div>
+    <p style="margin-top: -15px; color: var(--muted); font-size: 1.1rem; margin-bottom: 30px;">
+        Use for <strong>Imaginary / Unlikely</strong> situations.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; text-align: left;">
+        <!-- Formula -->
+        <div style="background: rgba(255, 255, 255, 0.08); padding: 20px; border-radius: 18px; border-top: 4px solid #88d6ff; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <div style="font-size: 1.8rem; margin-bottom: 10px;">🛠️ Formula</div>
+            <strong style="color: #88d6ff; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">The basic rule</strong>
+            <div style="font-size: 1.25rem; font-weight: 800; margin: 8px 0;">If + <span style="color: #f87171;">Past Simple</span>,</div>
+            <div style="font-size: 1.25rem; font-weight: 800; margin: 8px 0;"><span style="color: #fbbf24;">would</span> + Verb</div>
+            <div style="font-size: 0.9rem; color: var(--muted); margin-top: 10px;">"If I <span style="border-bottom: 1px solid;">won</span>, I <span style="border-bottom: 1px solid;">would travel</span>."</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="split-teaching-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0;">
+    <!-- Left Side: Slides -->
+    <div class="teaching-slides-card" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); padding: 30px; border-radius: 20px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+        <h3 style="margin-top: 0; font-size: 1.6rem; color: var(--accent);">📊 Teaching Slides</h3>
+        <p style="font-size: 0.95rem; color: var(--muted); margin: 10px 0 20px 0;">Access the interactive lecture slides on the Second Conditional.</p>
+        <a href="https://docs.google.com/presentation/d/1-gP-MqyCADVQ6kIvGItkF4A0F7_HwgYs/preview" target="_blank" class="btn" style="margin: 0; padding: 12px 24px; font-size: 1.1rem; width: 100%;">📖 Open Teaching Slides</a>
+    </div>
+
+    <!-- Right Side: Song -->
+    <div class="teaching-song-card" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); padding: 30px; border-radius: 20px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+        <h3 style="margin-top: 0; font-size: 1.6rem; color: var(--primary);">🎵 Teaching Song</h3>
+        <p style="font-size: 0.95rem; color: var(--muted); margin: 10px 0 20px 0;">Study grammar structures in music with color-coded lyrics highlights.</p>
+        <button id="songToggleBtn" onclick="toggleSong()" class="btn" style="margin: 0; padding: 12px 24px; font-size: 1.1rem; width: 100%; cursor: pointer;">🎤 Open Teaching Song</button>
+    </div>
+</div>
+
+<div id="songContainer" style="display: none; background: rgba(10, 20, 37, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 35px; margin-top: 20px; box-shadow: var(--shadow); backdrop-filter: blur(12px); margin-bottom: 40px;">
+    
+    <!-- Hidden HTML5 Audio Element -->
+    <audio id="songAudio" src="/assets/audio/second-conditional-song.mp3"></audio>
+
+    <!-- Header & Info -->
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+        <h4 style="margin: 0; font-size: 1.4rem; color: var(--accent);">🎵 "Neon Glows Bright" - Teaching Song</h4>
+        <div class="legend" style="font-size: 0.95rem; color: var(--muted); user-select: none; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <strong>Grammar Focus:</strong> 
+            <strong class="g-if">If-Clause (Past Simple Verb)</strong> 
+            <span style="color: rgba(255,255,255,0.2);">|</span> 
+            <strong class="g-result">Main Clause (would / modal + base verb)</strong>
+        </div>
+    </div>
+
+    <!-- Custom Glassmorphic Audio Player Controls -->
+    <div class="audio-player-wrapper" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 15px 25px; margin-bottom: 30px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <!-- Play/Pause Button -->
+        <button id="playPauseBtn" onclick="togglePlay()" style="background: linear-gradient(135deg, var(--primary), var(--primary-2)); border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(110, 193, 228, 0.3); outline: none;">
+            <span id="playIcon" style="font-size: 1.4rem; color: white; margin-left: 2px; user-select: none;">▶</span>
+        </button>
+
+        <!-- Timeline & Time Info -->
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 5px; min-width: 200px;">
+            <div id="timelineContainer" onclick="seekAudio(event)" style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; width: 100%; cursor: pointer; position: relative; overflow: hidden;">
+                <div id="audioProgress" style="background: var(--primary); height: 100%; width: 0%; border-radius: 4px; transition: width 0.1s linear;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); user-select: none;">
+                <span id="currentTime">0:00</span>
+                <span id="durationTime">0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lyrics Body -->
+    <div class="lyrics-body" style="font-family: inherit; font-size: 1.15rem; line-height: 2.4; text-align: center; color: #d7e4f4; max-height: 500px; overflow-y: auto; padding: 10px 20px; background: rgba(0,0,0,0.15); border-radius: 16px; border: 1px solid rgba(255,255,255,0.03); scroll-behavior: smooth;">
+        <style>
+            /* Base lyric line spacing and transition */
+            .lyric-line {
+                color: rgba(215, 228, 244, 0.4); /* Muted blue-grey for inactive lines */
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                display: inline-block;
+                width: 100%;
+                padding: 4px 0;
+            }
+
+            /* Active line text brightness */
+            .lyric-line.active {
+                color: #ffffff;
+                text-shadow: 0 0 12px rgba(136, 214, 255, 0.2);
+                transform: scale(1.01);
+            }
+
+            /* Legend Indicator Badges */
+            .legend strong.g-if {
+                color: #00f0ff;
+                text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+                border: 1px solid rgba(0, 240, 255, 0.25);
+                background: rgba(0, 240, 255, 0.05);
+                padding: 2px 8px;
+                border-radius: 6px;
+                display: inline-block;
+            }
+            .legend strong.g-result {
+                color: #ffde59;
+                text-shadow: 0 0 8px rgba(255, 222, 89, 0.3);
+                border: 1px solid rgba(255, 222, 89, 0.25);
+                background: rgba(255, 222, 89, 0.05);
+                padding: 2px 8px;
+                border-radius: 6px;
+                display: inline-block;
+            }
+
+            /* Base style for target grammar elements */
+            .lyric-line strong {
+                font-weight: 800;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                padding: 2px 6px;
+                border-radius: 6px;
+                border: 1px solid transparent;
+                display: inline-block;
+                position: relative; /* For pseudo-element underline positioning */
+            }
+
+            /* Pseudo-element for expanding underline */
+            .lyric-line strong::after {
+                content: '';
+                position: absolute;
+                bottom: 2px;
+                left: 6px;
+                right: 6px;
+                height: 2px;
+                border-radius: 2px;
+                transform: scaleX(0);
+                transform-origin: center;
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            /* -- IF-CLAUSE (Cyan) -- */
+            /* Inactive: semi-transparent, readable color */
+            .lyric-line strong.g-if {
+                color: rgba(92, 225, 230, 0.65);
+            }
+            /* Active: bright cyan glow and expanding underline */
+            .lyric-line.active strong.g-if {
+                color: #00f0ff;
+                text-shadow: 0 0 8px rgba(0, 240, 255, 0.8), 0 0 20px rgba(0, 240, 255, 0.4);
+                border-color: rgba(0, 240, 255, 0.3);
+                background: rgba(0, 240, 255, 0.06);
+                transform: scale(1.08);
+            }
+            .lyric-line.active strong.g-if::after {
+                background: #00f0ff;
+                box-shadow: 0 0 8px #00f0ff;
+                transform: scaleX(1);
+            }
+
+            /* -- RESULT-CLAUSE (Yellow/Orange) -- */
+            /* Inactive: semi-transparent, readable color */
+            .lyric-line strong.g-result {
+                color: rgba(255, 222, 89, 0.65);
+            }
+            /* Active: bright yellow glow and expanding underline */
+            .lyric-line.active strong.g-result {
+                color: #ffde59;
+                text-shadow: 0 0 8px rgba(255, 222, 89, 0.8), 0 0 20px rgba(255, 222, 89, 0.4);
+                border-color: rgba(255, 222, 89, 0.3);
+                background: rgba(255, 222, 89, 0.06);
+                transform: scale(1.08);
+            }
+            .lyric-line.active strong.g-result::after {
+                background: #ffde59;
+                box-shadow: 0 0 8px #ffde59;
+                transform: scaleX(1);
+            }
+        </style>
+        <!-- Intro -->
+        <p style="margin-bottom: 30px;">
+            <span class="lyric-line" id="line-1" data-start="14.45" data-end="21.0">If I <strong class="g-if">stayed</strong> silent, I <strong class="g-result">would hear</strong> the constant hum.</span><br>
+            <span class="lyric-line" id="line-2" data-start="22.2" data-end="29.0">If I <strong class="g-if">drove</strong> further, I <strong class="g-result">would see</strong> where I came from.</span>
+        </p>
+        
+        <!-- Verse 1 -->
+        <p style="margin-bottom: 30px;">
+            <span class="lyric-line" id="line-3" data-start="31.3" data-end="35.0">If I <strong class="g-if">drove</strong> faster, I <strong class="g-result">would escape</strong> the stress,</span><br>
+            <span class="lyric-line" id="line-4" data-start="35.2" data-end="39.0">If the streets <strong class="g-if">were</strong> empty, I <strong class="g-result">would fix</strong> this mess.</span><br>
+            <span class="lyric-line" id="line-5" data-start="39.1" data-end="43.0">If I <strong class="g-if">turned</strong> left where the neon glows bright,</span><br>
+            <span class="lyric-line" id="line-6" data-start="43.1" data-end="47.0">I <strong class="g-result">would find</strong> a reason to change the night.</span>
+        </p>
+
+        <!-- Buildup -->
+        <p style="margin-bottom: 30px; font-style: italic; opacity: 0.85;">
+            <span class="lyric-line" id="line-7" data-start="47.1" data-end="54.0">If I <strong class="g-if">voiced</strong> my thoughts, I <strong class="g-result">would feel</strong> the sound,</span><br>
+            <span class="lyric-line" id="line-8" data-start="55.0" data-end="64.0">If I <strong class="g-if">stopped</strong> the car, I <strong class="g-result">would look</strong> around.</span>
+        </p>
+
+        <!-- Chorus -->
+        <p style="margin-bottom: 30px; font-weight: bold; border-left: 2px solid rgba(110, 193, 228, 0.3); border-right: 2px solid rgba(110, 193, 228, 0.3); padding: 0 15px; background: rgba(255, 255, 255, 0.01); border-radius: 8px;">
+            <span class="lyric-line" id="line-9" data-start="63.5" data-end="71.9">If the city lights <strong class="g-if">were</strong> dimmer, I <strong class="g-result">would not be</strong> alone,</span><br>
+            <span class="lyric-line" id="line-10" data-start="72.0" data-end="79.0">If you <strong class="g-if">were</strong> here, I <strong class="g-result">would call</strong> your secret phone.</span><br>
+            <span class="lyric-line" id="line-11" data-start="79.2" data-end="86.0">If I <strong class="g-if">were</strong> courageous, I <strong class="g-result">would stop</strong> the car,</span><br>
+            <span class="lyric-line" id="line-12" data-start="86.2" data-end="94.0">If I <strong class="g-if">knew</strong> the destination, I <strong class="g-result">would not be</strong> far.</span>
+        </p>
+
+        <!-- Verse 2 -->
+        <p style="margin-bottom: 30px;">
+            <span class="lyric-line" id="line-13" data-start="94.8" data-end="100.0">If I <strong class="g-if">reached</strong> the horizon, I <strong class="g-result">would see</strong> the sea,</span><br>
+            <span class="lyric-line" id="line-14" data-start="100.2" data-end="109.0">If I <strong class="g-if">let</strong> go of the past, I <strong class="g-result">would finally be</strong> free.</span><br>
+            <span class="lyric-line" id="line-15" data-start="109.1" data-end="113.0">If the radio <strong class="g-if">played</strong> a song that we once knew,</span><br>
+            <span class="lyric-line" id="line-16" data-start="113.1" data-end="120.0">I <strong class="g-result">would see</strong> my reflection and <strong class="g-result">think</strong> of you.</span>
+        </p>
+
+        <!-- Buildup -->
+        <p style="margin-bottom: 30px; font-style: italic; opacity: 0.85;">
+            <span class="lyric-line" id="line-17" data-start="120.1" data-end="126.0">If I <strong class="g-if">changed</strong> my mind, I <strong class="g-result">would turn</strong> around,</span><br>
+            <span class="lyric-line" id="line-18" data-start="126.1" data-end="135.0">If I <strong class="g-if">heard</strong> your whisper, I <strong class="g-result">would like</strong> the sound.</span>
+        </p>
+
+        <!-- Chorus -->
+        <p style="margin-bottom: 30px; font-weight: bold; border-left: 2px solid rgba(110, 193, 228, 0.3); border-right: 2px solid rgba(110, 193, 228, 0.3); padding: 0 15px; background: rgba(255, 255, 255, 0.01); border-radius: 8px;">
+            <span class="lyric-line" id="line-19" data-start="135.2" data-end="143.0">If the city lights <strong class="g-if">were</strong> dimmer, I <strong class="g-result">would not be</strong> alone,</span><br>
+            <span class="lyric-line" id="line-20" data-start="143.1" data-end="150.0">If you <strong class="g-if">were</strong> here, I <strong class="g-result">would call</strong> your secret phone.</span><br>
+            <span class="lyric-line" id="line-21" data-start="150.1" data-end="157.0">If I <strong class="g-if">were</strong> courageous, I <strong class="g-result">would stop</strong> the car,</span><br>
+            <span class="lyric-line" id="line-22" data-start="157.1" data-end="167.0">If I <strong class="g-if">knew</strong> the destination, I <strong class="g-result">would not be</strong> far.</span>
+        </p>
+
+        <!-- Outro -->
+        <p style="margin-bottom: 30px; color: var(--muted);">
+            <span class="lyric-line" id="line-23" data-start="167.6" data-end="174.0">If I <strong class="g-if">stayed</strong> here, <strong class="g-result">would</strong> you <strong class="g-result">stay</strong> too?</span><br>
+            <span class="lyric-line" id="line-24" data-start="174.1" data-end="183.0">If I <strong class="g-if">were</strong> a phantom, <strong class="g-result">would</strong> I still <strong class="g-result">love</strong> you?</span><br>
+            <span class="lyric-line" id="line-25" data-start="183.1" data-end="191.0">If I <strong class="g-if">were</strong> you, <strong class="g-result">would</strong> I <strong class="g-result">feel</strong> this regret?</span><br>
+            <span class="lyric-line" id="line-26" data-start="191.1" data-end="202.0">If I <strong class="g-if">were</strong> you, <strong class="g-result">would</strong> I ever <strong class="g-result">forget</strong>?</span>
+        </p>
+    </div>
+</div>
+
+
+        <hr>
+
+        <h3>📊 Practice</h3>
+
+        <!-- Verb Transformer Section -->
+        <div class="interactive-lab card" style="margin-bottom: 30px; padding: 25px; border-left: 5px solid var(--primary); background: rgba(255,255,255,0.02); border-radius: 12px;">
+            <h4 style="margin-top: 0;">🧪 Verb Transformer Lab</h4>
+            <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 20px;">Type a base verb (e.g., 'buy', 'be', 'go') to see how it transforms in the Second Conditional!</p>
+            
+            <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                <input type="text" id="verbInput" class="verb-lab-input" placeholder="Enter base verb..." onkeyup="if(event.key === 'Enter') transformVerb()">
+                <button onclick="transformVerb()" class="btn" style="padding: 12px 24px; border-radius: 8px;">Transform ✨</button>
+            </div>
+
+            <div id="transformResult" style="margin-top: 25px; display: none; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 10px; animation: fadeIn 0.3s ease;">
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <span style="font-size: 0.85rem; display: block; margin-bottom: 8px; color: var(--primary); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">If-Clause Form (Past Simple):</span>
+                        <span class="grammar-bubble bubble-cyan" style="font-size: 1.1rem;">... if I <span class="v-bubble v-green" id="ifClauseVerb" style="font-weight: bold;">---</span> ...</span>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85rem; display: block; margin-bottom: 8px; color: var(--primary); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Result-Clause Form (Would + Base):</span>
+                        <span class="grammar-bubble bubble-yellow" style="font-size: 1.1rem;">... I <span class="v-bubble v-red" style="font-weight: bold;">would</span> <span class="v-bubble v-orange" id="mainClauseVerb" style="font-weight: bold;">---</span> ...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>Situation</th>
+                <th>Second Conditional Sentence</th>
+            </tr>
+
+            <tr>
+                <td colspan="2"><strong>Complete Sentences (Example)</strong></td>
+            </tr>
+            <tr>
+                <td>Have more money / buy a car</td>
+                <td>
+                    <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">had</span> more money</span>, 
+                    <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">buy</span> a car</span>.
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><strong>Your Turn - Fill in the Blanks</strong></td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Be rich</span> / 
+                    <span onclick="togglePart(event, this, 2)">travel the world</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If I __________ (be) rich</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">were</span> rich</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">I __________ (travel) the world.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">travel</span> the world</span></span>
+                    </span>.
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Speak Spanish</span> / 
+                    <span onclick="togglePart(event, this, 2)">move to Spain</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If she __________ (speak) Spanish</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If she <span class="v-bubble v-green">spoke</span> Spanish</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">she __________ (move) to Spain.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">she <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">move</span> to Spain</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Have wings</span> / 
+                    <span onclick="togglePart(event, this, 2)">fly everywhere</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If I __________ (have) wings</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">had</span> wings</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">I __________ (fly) everywhere.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">fly</span> everywhere</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Live in the city</span> / 
+                    <span onclick="togglePart(event, this, 2)">not need a car</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If I __________ (live) in the city</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">lived</span> in the city</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">I __________ (not need) a car.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would not</span> <span class="v-bubble v-orange">need</span> a car</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Know the answer</span> / 
+                    <span onclick="togglePart(event, this, 2)">tell you</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If I __________ (know) the answer</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">knew</span> the answer</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">I __________ (tell) you.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">tell</span> you</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><strong>Using "Were" for All Persons</strong></td>
+            </tr>
+            <tr>
+                <td>I / be you / study harder</td>
+                <td>
+                    <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">were</span> you</span>, 
+                    <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">study</span> harder</span>.
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">He / be taller</span> / 
+                    <span onclick="togglePart(event, this, 2)">play basketball</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If he __________ (be) taller</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If he <span class="v-bubble v-green">were</span> taller</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">he __________ (play) basketball.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">he <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">play</span> basketball</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">She / be here</span> / 
+                    <span onclick="togglePart(event, this, 2)">help us</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If she __________ (be) here</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If she <span class="v-bubble v-green">were</span> here</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">she __________ (help) us.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">she <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">help</span> us</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">It / be sunny</span> / 
+                    <span onclick="togglePart(event, this, 2)">go to the park</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If it __________ (be) sunny</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If it <span class="v-bubble v-green">were</span> sunny</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">we __________ (go) to the park.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">we <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">go</span> to the park</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><strong>Using Different Modal Verbs</strong></td>
+            </tr>
+            <tr>
+                <td>Have a bike / ride to school (could)</td>
+                <td>
+                    <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">had</span> a bike</span>, 
+                    <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">could</span> <span class="v-bubble v-orange">ride</span> to school</span>.
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Be cheaper</span> / 
+                    <span onclick="togglePart(event, this, 2)">buy it (might)</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If it __________ (be) cheaper</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If it <span class="v-bubble v-green">were</span> cheaper</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">I __________ (might / buy) it.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">might</span> <span class="v-bubble v-orange">buy</span> it</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Win the lottery</span> / 
+                    <span onclick="togglePart(event, this, 2)">quit my job (might)</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If I __________ (win) the lottery</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">won</span> the lottery</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">I __________ (might / quit) my job.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">might</span> <span class="v-bubble v-orange">quit</span> my job</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Have superpowers</span> / 
+                    <span onclick="togglePart(event, this, 2)">help people (could)</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">If I __________ (have) superpowers</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">had</span> superpowers</span></span>
+                    </span>, 
+                    <span class="part part-2">
+                        <span class="placeholder">I __________ (could / help) people.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">could</span> <span class="v-bubble v-orange">help</span> people</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><strong>Reversed Order (Main clause first)</strong></td>
+            </tr>
+            <tr>
+                <td>Help you / know how</td>
+                <td>
+                    <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">help</span> you</span> 
+                    <span class="grammar-bubble bubble-cyan">if I <span class="v-bubble v-green">knew</span> how</span>.
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Be happier</span> / 
+                    <span onclick="togglePart(event, this, 2)">have more free time</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">I __________ (would / be) happier</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">be</span> happier</span></span>
+                    </span> 
+                    <span class="part part-2">
+                        <span class="placeholder">if I __________ (have) more free time.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">if I <span class="v-bubble v-green">had</span> more free time</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="clickable-situation">
+                    <span onclick="togglePart(event, this, 1)">Move abroad</span> / 
+                    <span onclick="togglePart(event, this, 2)">speak the language</span>
+                </td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">I __________ (would / move) abroad</span>
+                        <span class="answer"><span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">move</span> abroad</span></span>
+                    </span> 
+                    <span class="part part-2">
+                        <span class="placeholder">if I __________ (speak) the language.</span>
+                        <span class="answer"><span class="grammar-bubble bubble-cyan">if I <span class="v-bubble v-green">spoke</span> the language</span></span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h3>⚠️ Common Mistakes</h3>
+        <table>
+            <tr>
+                <th>❌ Incorrect</th>
+                <th>✅ Correct</th>
+            </tr>
+            <tr>
+                <td>If I <mark class="red">would have</mark> money, I would buy a car.</td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">Show Correction</span>
+                        <span class="answer">
+                            <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">had</span> money</span>, 
+                            <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">buy</span> a car</span>.
+                        </span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td>If I <mark class="green">have</mark> time, I would help. (First conditional structure)</td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">Show Correction</span>
+                        <span class="answer">
+                            <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">had</span> time</span>, 
+                            <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">help</span></span>.
+                        </span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td>If I <mark class="green">was</mark> rich, I would travel.</td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">Show Correction</span>
+                        <span class="answer">
+                            <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">were</span> rich</span>, 
+                            <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">travel</span></span>.
+                        </span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td>If she studied harder, she <span style="text-decoration: line-through;">will pass</span>.</td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">Show Correction</span>
+                        <span class="answer">
+                            <span class="grammar-bubble bubble-cyan">If she <span class="v-bubble v-green">studied</span> harder</span>, 
+                            <span class="grammar-bubble bubble-yellow">she <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">pass</span></span>.
+                        </span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+            <tr>
+                <td>If I <mark class="green">win</mark> the lottery, I would quit. (First conditional tense)</td>
+                <td class="clickable-sentence" onclick="toggleFullRow(this)">
+                    <span class="part part-1">
+                        <span class="placeholder">Show Correction</span>
+                        <span class="answer">
+                            <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">won</span> the lottery</span>, 
+                            <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">quit</span></span>.
+                        </span>
+                    </span>
+                    <span class="audio-icon" onclick="speakSentence(this)">🔊</span>
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+
+<div style="text-align: center; margin: 30px 0;">
+    <a href="../Quizzes/Second Conditional - Quiz.html" class="btn">📝 Take the Quiz</a>
+</div>
+
+<hr>
+
+        <h3>📦 Concept Compressed</h3>
+        <p>The Second Conditional expresses hypothetical, imaginary, or unlikely situations in the present or future, along with their imagined results. It uses the Past Simple in the <em>if</em> clause and <em>would</em> (or other modals) + base verb in the main clause.</p>
+
+        <h4>Structure</h4>
+        <p><strong>If</strong> + subject + <span class="v-bubble v-green"><strong>past simple</strong></span>, subject + <span class="v-bubble v-red"><strong>would/modal</strong></span> + <span class="v-bubble v-orange">base verb</span></p>
+        <ul>
+            <li><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">were</span> rich</span>, <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">buy</span> a yacht</span>.</li>
+            <li><span class="grammar-bubble bubble-cyan">If she <span class="v-bubble v-green">studied</span> harder</span>, <span class="grammar-bubble bubble-yellow">she <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">pass</span> the exam</span>.</li>
+        </ul>
+        <p><em>Note: Despite using past simple, this talks about present/future, not past events.</em></p>
+
+        <h4>When to Use</h4>
+        <ul>
+            <li><strong>Imaginary present situations:</strong> <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">had</span> more time</span>, <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">learn</span> Spanish</span>.</li>
+            <li><strong>Unlikely future events:</strong> <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">won</span> the lottery</span>, <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">quit</span> my job</span>.</li>
+            <li><strong>Hypothetical advice:</strong> <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">were</span> you</span>, <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">apologize</span></span>.</li>
+            <li><strong>Dreams/wishes:</strong> <span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">could</span> <span class="v-bubble v-orange">fly</span></span>, <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">visit</span> every country</span>.</li>
+        </ul>
+
+        <h4>Special Rule: "Were" for All Subjects</h4>
+        <p>With the verb <em>to be</em>, use <em>were</em> for all subjects (I/he/she/it were), especially in formal writing:</p>
+        <ul>
+            <li><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">were</span> taller</span>, <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">play</span> basketball</span>.</li>
+            <li><span class="grammar-bubble bubble-cyan">If he <span class="v-bubble v-green">were</span> here</span>, <span class="grammar-bubble bubble-yellow">he <span class="v-bubble v-red">would</span> <span class="v-bubble v-orange">help</span> us</span>.</li>
+        </ul>
+        <p><em>In informal speech, "was" is sometimes used: If I was rich...</em></p>
+
+        <h4>Modal Variations</h4>
+        <table>
+            <tr>
+                <th>Modal</th>
+                <th>Use</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>could</td>
+                <td>Ability/Possibility</td>
+                <td><span class="grammar-bubble bubble-cyan">If I <span class="v-bubble v-green">had</span> a car</span>, <span class="grammar-bubble bubble-yellow">I <span class="v-bubble v-red">could drive</span> you</span>.</td>
+            </tr>
+            <tr>
+                <td>might</td>
+                <td>Less certain possibility</td>
+                <td><span class="grammar-bubble bubble-cyan">If it <span class="v-bubble v-green">rained</span></span>, <span class="grammar-bubble bubble-yellow">we <span class="v-bubble v-red">might</span> <span class="v-bubble v-orange">cancel</span></span>.</td>
+            </tr>
+        </table>
+
+        <h4>Key Rules</h4>
+        <ul>
+            <li><strong>Past simple in if-clause:</strong> If I knew... (NOT If I would know...)</li>
+            <li><strong>Would in main clause:</strong> I would go... (NOT I go... or I will go...)</li>
+            <li><strong>Use comma when if-clause comes first</strong></li>
+        </ul>
+
+<script>
+    // Global dictionary for efficiency
+    const irregularVerbs = {
+        "be": "were", "go": "went", "have": "had", "do": "did", "say": "said",
+        "get": "got", "make": "made", "know": "knew", "think": "thought",
+        "take": "took", "see": "saw", "come": "came", "find": "found",
+        "give": "gave", "tell": "told", "feel": "felt", "leave": "left",
+        "put": "put", "mean": "meant", "keep": "kept", "let": "let",
+        "begin": "began", "show": "showed", "hear": "heard", "run": "ran",
+        "bring": "brought", "write": "wrote", "sit": "sat", "stand": "stood",
+        "lose": "lost", "pay": "paid", "meet": "met", "set": "set",
+        "learn": "learned", "lead": "led", "understand": "understood",
+        "speak": "spoke", "read": "read", "spend": "spent", "grow": "grew",
+        "win": "won", "buy": "bought", "send": "sent", "fall": "fell",
+        "choose": "chose", "sleep": "slept", "drive": "drove", "eat": "ate",
+        "break": "broke", "catch": "caught", "draw": "drew", "fly": "flew",
+        "forget": "forgot", "steal": "stole", "throw": "threw", "wake": "woke",
+        "wear": "wore", "sell": "sold", "hit": "hit", "shut": "shut"
+    };
+
+    function transformVerb() {
+        const input = document.getElementById('verbInput');
+        const verb = input.value.trim().toLowerCase();
+        if (!verb) return;
+
+        let pastSimple;
+        if (irregularVerbs[verb]) {
+            pastSimple = irregularVerbs[verb];
+        } else if (verb.endsWith('e')) {
+            pastSimple = verb + 'd';
+        } else if (verb.endsWith('y') && !/[aeiou]y$/.test(verb)) {
+            pastSimple = verb.slice(0, -1) + 'ied';
+        } else if (/[bcdfghjklmnpqrstvwxz][aeiou][bcdfghjklmnpqrstvwxz]$/.test(verb) && !/[xyw]$/.test(verb)) {
+            // CVC doubling (simplified)
+            pastSimple = verb + verb.slice(-1) + 'ed';
+        } else {
+            pastSimple = verb + 'ed';
+        }
+
+        document.getElementById('ifClauseVerb').textContent = pastSimple;
+        document.getElementById('mainClauseVerb').textContent = verb;
+        document.getElementById('transformResult').style.display = 'block';
+    }
+
+    // --- Custom Audio Player & Toggle Song Lyrics Logic ---
+    let audio;
+    let playPauseBtn;
+    let playIcon;
+    let progressBar;
+    let currentTimeText;
+    let durationTimeText;
+
+    function initAudioPlayer() {
+        audio = document.getElementById('songAudio');
+        playPauseBtn = document.getElementById('playPauseBtn');
+        playIcon = document.getElementById('playIcon');
+        progressBar = document.getElementById('audioProgress');
+        currentTimeText = document.getElementById('currentTime');
+        durationTimeText = document.getElementById('durationTime');
+
+        if (!audio) return;
+
+        // Time Update Listener
+        audio.addEventListener('timeupdate', () => {
+            const current = audio.currentTime;
+            const duration = audio.duration;
+            if (!isNaN(duration)) {
+                const percentage = (current / duration) * 100;
+                progressBar.style.width = percentage + '%';
+                currentTimeText.textContent = formatTime(current);
+            }
+
+            // Karaoke Style Highlight & Center Auto-Scroll
+            const lines = document.querySelectorAll('.lyric-line');
+            const container = document.querySelector('.lyrics-body');
+            let activeLine = null;
+
+            lines.forEach(line => {
+                const start = parseFloat(line.getAttribute('data-start'));
+                const end = parseFloat(line.getAttribute('data-end'));
+                if (current >= start && current <= end) {
+                    line.classList.add('active');
+                    activeLine = line;
+                } else {
+                    line.classList.remove('active');
+                }
+            });
+
+            if (activeLine && container) {
+                if (container.dataset.activeId !== activeLine.id) {
+                    container.dataset.activeId = activeLine.id;
+                    const containerHeight = container.clientHeight;
+                    // Calculate position relative to container by subtracting container's offsetTop if needed
+                    const lineOffsetTop = activeLine.offsetTop - container.offsetTop;
+                    const lineLimit = container.scrollHeight - containerHeight;
+                    const targetScroll = Math.min(lineLimit, Math.max(0, lineOffsetTop - (containerHeight / 2) + 20));
+                    container.scrollTop = targetScroll;
+                }
+            }
+        });
+
+        // Duration Loaded Listener
+        audio.addEventListener('loadedmetadata', () => {
+            durationTimeText.textContent = formatTime(audio.duration);
+        });
+
+        // Reset Player when Song Ends
+        audio.addEventListener('ended', () => {
+            playIcon.textContent = '▶';
+            progressBar.style.width = '0%';
+            currentTimeText.textContent = '0:00';
+        });
+    }
+
+    function formatTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    function togglePlay() {
+        if (!audio) initAudioPlayer();
+        if (!audio) return;
+        
+        if (audio.paused) {
+            audio.play();
+            playIcon.textContent = '⏸';
+        } else {
+            audio.pause();
+            playIcon.textContent = '▶';
+        }
+    }
+
+    function seekAudio(event) {
+        if (!audio) initAudioPlayer();
+        if (!audio) return;
+        
+        const rect = document.getElementById('timelineContainer').getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const width = rect.width;
+        const duration = audio.duration;
+        
+        if (!isNaN(duration) && isFinite(duration) && duration > 0 && width > 0) {
+            let targetTime = (clickX / width) * duration;
+            if (targetTime < 0) targetTime = 0;
+            if (targetTime > duration) targetTime = duration;
+            audio.currentTime = targetTime;
+        }
+    }
+
+    function toggleSong() {
+        const container = document.getElementById('songContainer');
+        const btn = document.getElementById('songToggleBtn');
+        if (!container || !btn) return;
+        
+        if (container.style.display === 'none' || !container.style.display) {
+            container.style.display = 'block';
+            container.style.animation = 'fadeIn 0.4s ease';
+            btn.innerHTML = '✕ Close Teaching Song';
+            initAudioPlayer();
+            setTimeout(() => {
+                container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        } else {
+            container.style.display = 'none';
+            btn.innerHTML = '🎤 Open Teaching Song';
+            // Pause song if closed
+            if (audio && !audio.paused) {
+                audio.pause();
+                playIcon.textContent = '▶';
+            }
+        }
+    }
+</script>
+
+        </div>
+    </div>
+
+    
+    <a href="../../index.html" class="floating-side-btn floating-left">
+        <span style="font-size: 0.85rem; font-weight: 800; line-height: 1; letter-spacing: 0.05em; margin-bottom: 3px; color: var(--accent);">BACK</span>
+        <span style="font-size: 0.75rem; line-height: 1; opacity: 0.85;">Home</span>
+    </a>
+    
+
+    
+    <button type="button" id="speedToggleBtn" class="floating-side-btn floating-right" onclick="toggleAudioSpeed()">
+        <span style="font-size: 0.85rem; font-weight: 800; line-height: 1; letter-spacing: 0.05em; margin-bottom: 3px; color: var(--accent);">AUDIO</span>
+        <span style="font-size: 0.75rem; line-height: 1; opacity: 0.85;">Slower</span>
+    </button>
+    
+
+    <script>window.pageCategory = "Grammar";</script>
+    <script src="../../Webpage_static_files/main.js"></script>
+</body>
+</html>
