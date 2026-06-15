@@ -1,7 +1,7 @@
 // ====== ⚙️ 控制中心 (維護與視覺設定) ======
 // 這裡設定你想要顯示的維護訊息主題
 // 當你要維護網頁時，把這裡改成 true。平常正常運作時，改成 false。
-const isMaintenance = true;       // true = 啟動全黑維護面；false = 開啟正常網頁主頁
+const isMaintenance = false;       // true = 啟動全黑維護面；false = 開啟正常網頁主頁
 // 可以填寫："maint" (維護中)、"permission" (權限不足)、"error" (無法運行)、"404" (檔案找不到了)
 // 可選："maint"、"permission"、"error"、"404"
 const maintenanceMode = "maint";   // 可選："maint"、"permission"、"error"、"404"
