@@ -11,7 +11,7 @@ const maintenanceMode = "maint";
 
 const errorMessages = {
     "404": { title: "404 Not Found", detail: "找不到檔案：這裏的檔案可能已經過期或已經被移除，請確認連結是否正確。" },
-    "maint": { title: "網頁維護中", detail: "伺服器正在維護中，暫時無法開啟檔案，請稍後再試。" },
+    "maint": { title: "網頁維護中", detail: "伺服器正在維護中，暫時無法開啟網頁，請稍後再試。" },
     "error": { title: "網頁無法運行", detail: "您所要求的網頁或連結目前無法運行，造成不便敬請見諒。" },
     "permission": { title: "存取受限", detail: "您的權限不足，無法瀏覽此網頁。" },
     "expired": { title: "網頁已失效", detail: "連結已失效：檔案已經過期" }
