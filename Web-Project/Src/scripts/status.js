@@ -2,7 +2,7 @@
 
 // ====== 🛠️ 維護總開關 ======
 // 當你要維護網頁時，把這裡改成 true。平常正常運作時，改成 false。
-const isMaintenance = false; 
+const isMaintenance = true; 
 
 // 這裡設定你想要顯示的維護訊息主題
 // 可以填寫："maint" (維護中)、"permission" (權限不足)、"error" (無法運行)、"404" (檔案找不到了)
