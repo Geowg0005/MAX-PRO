@@ -1,5 +1,5 @@
 // ====== ⚙️ 控制中心 (維護與視覺設定) ======
-const isMaintenance = false; 
+const isMaintenance = true; 
 // true = 啟動全黑維護面；false = 關閉維護面，讓所有網頁恢復正常運作
 const maintenanceMode = "404"; 
 // 可選："maint"、"permission"、"error"、"404"
